@@ -8,4 +8,4 @@ https://docs.expo.dev/
   https://nodejs.org/en/
   
 - グローバルなExpoのCLIは、非推奨になっているので導入しない方がいいと思われます。
-- git clone した後に、npm run で起動します。 その後、IOSかAndroidのコマンドを選択してください。
+- git clone した後に、npm run で起動します。 その後、IOSかAndroidのコマンドを入力してください。
