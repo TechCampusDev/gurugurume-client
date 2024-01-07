@@ -7,7 +7,7 @@ https://docs.expo.dev/
 - node.js がインストールされていることを確認してください。  
   https://nodejs.org/en/
 
-- Watchman をインストールする。
+- Watchman をインストールする。  
   https://facebook.github.io/watchman/docs/install#buildinstall
   
 - グローバルなExpoのCLIは、非推奨になっているので導入しない方がいいと思われます。
