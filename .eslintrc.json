@@ -1,0 +1,5 @@
+{
+  "rules": {
+    "no-unused-vars": "warn" // 使用していないimportに警告を出す
+  }
+}
