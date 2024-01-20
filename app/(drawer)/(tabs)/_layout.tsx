@@ -1,7 +1,4 @@
 import { Tabs } from "expo-router";
-import { ReactNode } from "react";
-import { Animated } from "react-native";
-import { DrawerLayout } from "react-native-gesture-handler";
 
 export default function TabsLayout() {
   return (
