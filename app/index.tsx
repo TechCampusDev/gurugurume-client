@@ -8,6 +8,6 @@ export default function Main() {
   return auth.isAuthenticated ? (
     <Redirect href={AppRoute.home} />
   ) : (
-    <Redirect href={AppRoute.home} />
+    <Redirect href={AppRoute.login} />
   );
 }

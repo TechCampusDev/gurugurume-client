@@ -5,12 +5,27 @@ class Auth {
 
   private constructor() {
     // TOTO:アクセストークンを確認する。
-    this.isAuthenticated = true;
+    this.isAuthenticated = false;
   }
 
   static getInstance(): Auth {
     if (Auth.instance === undefined) Auth.instance = new Auth();
     return Auth.instance;
+  }
+
+  signUp(): void {
+    // TODO: 後ほど修正
+    this.isAuthenticated = true;
+  }
+
+  signUpAnonymously(): void {
+    // TODO: 後ほど修正
+    this.isAuthenticated = true;
+  }
+
+  login(): void {
+    // TODO: 後ほど修正
+    this.isAuthenticated = true;
   }
 }
 
