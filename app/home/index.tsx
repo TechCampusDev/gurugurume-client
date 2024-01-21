@@ -7,27 +7,12 @@ import RoundButton from "../../components/round_button";
 import Logo from "../../components/logo";
 
 export default function Home() {
-  const router = useRouter();
-
-  const goToSetting = () => {
-    router.push(AppRoute.setting);
-  };
-
   return (
     <>
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.container}>
         {/* トップバー */}
-        <View style={styles.topBar}>
-          <Logo />
-          <View style={{ flex: 1 }} />
-          <RoundButton
-            iconName={"refresh"}
-            onPress={() => console.log("更新")}
-          />
-          <View style={{ width: 16 }} />
-          <RoundButton iconName={"menu"} onPress={goToSetting} />
-        </View>
+        <TopBar />
         {/* ボディー */}
         <Text style={{ fontSize: 24 }}>Home</Text>
         <StatusBar style="auto" />
@@ -35,6 +20,24 @@ export default function Home() {
     </>
   );
 }
+
+const TopBar = () => {
+  const router = useRouter();
+
+  const goToSetting = () => {
+    router.push(AppRoute.setting);
+  };
+
+  return (
+    <View style={styles.topBar}>
+      <Logo />
+      <View style={{ flex: 1 }} />
+      <RoundButton iconName={"refresh"} onPress={() => console.log("更新")} />
+      <View style={{ width: 16 }} />
+      <RoundButton iconName={"menu"} onPress={goToSetting} />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
   container: {
