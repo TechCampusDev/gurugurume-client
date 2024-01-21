@@ -5,10 +5,11 @@ import AppRoute from "../../app_route/app_route";
 import React from "react";
 import RoundButton from "../../components/round_button";
 import Logo from "../../components/logo";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function Home() {
   return (
-    <>
+    <SafeAreaView style={styles.safeAreaView}>
       <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.container}>
         {/* トップバー */}
@@ -17,7 +18,7 @@ export default function Home() {
         <Text style={{ fontSize: 24 }}>Home</Text>
         <StatusBar style="auto" />
       </View>
-    </>
+    </SafeAreaView>
   );
 }
 
@@ -40,6 +41,9 @@ const TopBar = () => {
 };
 
 const styles = StyleSheet.create({
+  safeAreaView: {
+    flex: 1,
+  },
   container: {
     flex: 1,
     backgroundColor: "#fff",
