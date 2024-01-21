@@ -2,8 +2,7 @@
 const AppRoute = {
   root: "/",
   login: "/login",
-  home: "/(drawer)/(tabs)/home",
-  user: "/(drawer)/(tabs)/home",
+  home: "/home",
   setting: "/setting",
 };
 

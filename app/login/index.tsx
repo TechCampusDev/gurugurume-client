@@ -1,6 +1,6 @@
 import { Button, StyleSheet, View } from "react-native";
 import Auth from "../../auth/auth";
-import { useRouter } from "expo-router";
+import { Stack, useRouter } from "expo-router";
 import AppRoute from "../../app_route/app_route";
 
 export default function Login() {
@@ -13,6 +13,7 @@ export default function Login() {
 
   return (
     <>
+      <Stack.Screen options={{ headerShown: false }} />
       <View style={styles.container}>
         <Button
           title="ログイン"
