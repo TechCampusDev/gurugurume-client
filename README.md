@@ -12,4 +12,4 @@ https://docs.expo.dev/
   
 - グローバルなExpoのCLIは、非推奨になっているので導入しない方がいいと思われます。
   
-- git clone した後に、`npm install` -> iPhoneなら　`npm run　ios` 、Androidなら `npm run android` することでエミュレーターが起動する。 
+- git clone した後に、`npm install` -> iPhoneなら　`npm run ios` 、Androidなら `npm run android` することでエミュレーターが起動する。 
