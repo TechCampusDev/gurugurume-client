@@ -22,6 +22,7 @@ export default function Login() {
             redirectToRoot();
           }}
         />
+        <View style={{ height: 16 }} />
         <Button
           title="アカウント登録"
           onPress={() => {
@@ -29,6 +30,7 @@ export default function Login() {
             redirectToRoot();
           }}
         />
+        <View style={{ height: 16 }} />
         <Button
           title="登録なしで始める"
           onPress={() => {
