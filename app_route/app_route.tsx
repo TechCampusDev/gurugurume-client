@@ -4,6 +4,7 @@ const AppRoute = {
   login: "/login",
   home: "/home",
   setting: "/setting",
+  list: "/list"
 };
 
 export default AppRoute;
