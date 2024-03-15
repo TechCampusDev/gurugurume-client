@@ -1,14 +1,12 @@
-import {View} from "react-native";
-import {Text} from "react-native";
+import {Text, View} from "react-native";
 import React from "react";
-import ListItem from "../../components/list_item";
+import List from "../../components/list";
 
-export default function List() {
+export default function StoreList() {
     return (
         <View style={{flex: 1}}>
             <Text>test</Text>
-            <ListItem itemName={"name"} favorite={false} />
-            <ListItem itemName={"name"} favorite={false} />
+            <List />
         </View>
     );
 }
