@@ -1,27 +1,15 @@
 import {StyleProp, StyleSheet, Text, View} from "react-native";
 import React from "react";
 import List from "../../components/list";
+import Toggle from "../../components/toggle";
+import {ScrollView} from "react-native-gesture-handler";
 
 export default function StoreList() {
     return (
-        <View style={{flex: 1}}>
+        <ScrollView style={{flex: 1, alignContent: "center"}}>
             <Text>test</Text>
-            <Toggle style={styles.toggle} />
+            <Toggle />
             <List />
-        </View>
+        </ScrollView>
     );
 }
-
-const Toggle = ({style}: StyleProp<any>) => {
-    return (
-        <View style={style}>
-            <Text>toggle</Text>
-        </View>
-    );
-}
-
-const styles = StyleSheet.create({
-    toggle: {
-        alignSelf: "center"
-    }
-});
