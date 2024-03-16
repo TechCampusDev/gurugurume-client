@@ -13,14 +13,13 @@ const Toggle = ({isFavoriteList, setIsFavoriteList}: StateProps) => {
             <TouchableHighlight
                 style={styles().backStyle}
                 onPress={() => {
-                    console.log("pressed");
                     setIsFavoriteList(!isFavoriteList);
                 }}
                 underlayColor={"#bebebe"}
             >
                 <>
-                    <Text style={styles(!isFavoriteList).childStyle}>no1</Text>
-                    <Text style={styles(isFavoriteList).childStyle}>no2</Text>
+                    <Text style={styles(!isFavoriteList).childStyle}>履歴</Text>
+                    <Text style={styles(isFavoriteList).childStyle}>お気に入り</Text>
                 </>
             </TouchableHighlight>
         </View>
@@ -35,17 +34,22 @@ const styles = (status?: boolean) => StyleSheet.create({
         paddingVertical: 30
     },
     backStyle: {
-        backgroundColor: "#bebebe",
-        borderRadius: 20,
+        backgroundColor: "rgba(199,199,199,0.3)",
+        borderRadius: 10,
         flexDirection: "row",
         alignContent: "space-around",
         // flex: 1
     },
     childStyle: {
-        padding: 10,
-        width: 100,
-        borderRadius: 20,
-        backgroundColor: status ? "#ff0000" : undefined,
+        margin: 3,
+        padding: 7,
+        width: 125,
+        borderRadius: 10,
+        backgroundColor: status ? "#ffffff" : undefined,
+        borderColor: "#FABB44",
+        borderWidth: status? 3: 0,
+        fontSize: 20,
         textAlign: "center",
+        textAlignVertical: "center"
     }
 });
