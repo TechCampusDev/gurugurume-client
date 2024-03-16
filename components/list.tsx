@@ -2,12 +2,12 @@ import {View} from "react-native";
 import ListItem from "./list_item";
 
 export default function List({isFavoriteList}: {isFavoriteList: boolean}) {
-    const input = {
+    let input = {
         data: {
             items: [
                 {
                     "id": 1,
-                    "storeName": "レストラン桜木",
+                    "storeName": "手作りパンと自家製ジャムのカフェ・レストラン森の小径",
                     "favorite": true
                 },
                 {
@@ -111,7 +111,7 @@ export default function List({isFavoriteList}: {isFavoriteList: boolean}) {
     };
 
     return (
-        <View>
+        <View style={{marginBottom: 35}}>
             {
                 isFavoriteList && input.data.items.map(item => {
                     return(
