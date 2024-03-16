@@ -1,5 +1,5 @@
 import {StyleSheet, Text, View} from "react-native";
-import {useState} from "react";
+import React, {useState} from "react";
 import {FontAwesome5} from "@expo/vector-icons"
 
 interface ListItemInterface {
@@ -11,12 +11,11 @@ const ListItem: React.FC<ListItemInterface> = ({itemName, favorite}) => {
     const [favoriteState, setFavoriteState] = useState(favorite);
     const favoriteChange = () => {
         setFavoriteState(!favoriteState);
-        console.log(`press ${favoriteState}`);
     }
 
     return (
         <View style={styles.item}>
-            <Text>{itemName}</Text>
+            <Text style={styles.text}>{itemName}</Text>
             <FontAwesome5.Button
                 name={"heart"}
                 size={16}
@@ -37,15 +36,20 @@ const styles = StyleSheet.create({
         flexWrap: "wrap",
         backgroundColor: "#fff",
         padding: 10,
+        paddingLeft: 24,
         height: "auto",
         flexDirection: "row",
-        // alignContent: "space-between"
+        alignItems: "center",
         justifyContent: "space-between",
+        borderColor: "#C7C7C7",
+        borderBottomWidth: 2,
+    },
+    text: {
+        maxWidth: 300
     },
     icon: {
         backgroundColor: "#fff",
-        // color: "#ff0000",
         paddingRight: 0,
-        // paddingHorizontal: 10
+        textAlign: "center",
     }
 })
