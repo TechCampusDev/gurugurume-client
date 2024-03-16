@@ -1,7 +1,7 @@
 import {View} from "react-native";
 import ListItem from "./list_item";
 
-export default function List() {
+export default function List({isFavoriteList}: {isFavoriteList: boolean}) {
     const input = {
         data: {
             items: [
@@ -113,7 +113,19 @@ export default function List() {
     return (
         <View>
             {
-                input.data.items.map(item => {
+                isFavoriteList && input.data.items.map(item => {
+                    return(
+                        item.favorite &&
+                            <ListItem
+                                itemName={item.storeName}
+                                favorite={item.favorite}
+                                key={item.id}
+                            />
+                    );
+                })
+            }
+            {
+                !isFavoriteList && input.data.items.map(item => {
                     return(
                         <ListItem
                             itemName={item.storeName}

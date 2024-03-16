@@ -1,19 +1,26 @@
 import {StyleSheet, Text, View} from "react-native";
-import {useState} from "react";
 import {TouchableHighlight} from "react-native-gesture-handler";
 
-const Toggle = () => {
-    const [toggleStatus, setToggleStatus] = useState(false);
+type StateProps = {
+    isFavoriteList: boolean,
+    setIsFavoriteList: React.Dispatch<React.SetStateAction<boolean>>
+};
+
+const Toggle = ({isFavoriteList, setIsFavoriteList}: StateProps) => {
+
     return (
         <View style={styles().toggle}>
             <TouchableHighlight
                 style={styles().backStyle}
-                onPress={() => setToggleStatus(!toggleStatus)}
+                onPress={() => {
+                    console.log("pressed");
+                    setIsFavoriteList(!isFavoriteList);
+                }}
                 underlayColor={"#bebebe"}
             >
                 <>
-                    <Text style={styles(!toggleStatus).childStyle}>no1</Text>
-                    <Text style={styles(toggleStatus).childStyle}>no2</Text>
+                    <Text style={styles(!isFavoriteList).childStyle}>no1</Text>
+                    <Text style={styles(isFavoriteList).childStyle}>no2</Text>
                 </>
             </TouchableHighlight>
         </View>
