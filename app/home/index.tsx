@@ -79,6 +79,10 @@ const TopBar = () => {
     router.push(AppRoute.setting);
   };
 
+  const goToList = () => {
+    router.push(AppRoute.list);
+  };
+
   return (
     <View style={styles.topBar}>
       <Logo />
@@ -86,6 +90,8 @@ const TopBar = () => {
       <RoundButton iconName={"refresh"} onPress={() => console.log("更新")} />
       <View style={{ width: 16 }} />
       <RoundButton iconName={"menu"} onPress={goToSetting} />
+      <View style={{ width: 16 }} />
+      <RoundButton iconName={"menu"} onPress={goToList} />
     </View>
   );
 };
