@@ -43,8 +43,10 @@ const styles = (status?: boolean) => StyleSheet.create({
     childStyle: {
         margin: 3,
         padding: 7,
+        paddingTop: status ? 7: 10,
         width: 125,
         borderRadius: 10,
+        overflow: "hidden",
         backgroundColor: status ? "#ffffff" : undefined,
         borderColor: "#FABB44",
         borderWidth: status? 3: 0,
