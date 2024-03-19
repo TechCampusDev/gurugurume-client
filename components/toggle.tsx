@@ -1,5 +1,6 @@
-import {StyleSheet, Text, View} from "react-native";
+import {Platform, StyleSheet, Text, View} from "react-native";
 import {TouchableHighlight} from "react-native-gesture-handler";
+import React from "react";
 
 type StateProps = {
     isFavoriteList: boolean,
@@ -43,7 +44,7 @@ const styles = (status?: boolean) => StyleSheet.create({
     childStyle: {
         margin: 3,
         padding: 7,
-        paddingTop: status ? 7: 10,
+        paddingTop: Platform.OS === 'ios'? (status ? 7: 10) : 7,
         width: 125,
         borderRadius: 10,
         overflow: "hidden",
